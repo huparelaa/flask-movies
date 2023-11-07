@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: flask-movies
-        image: adrephos/api-peliculas
+        image: hobarlan/flask-movies:2
         ports:
           - name: http-server
             containerPort: 5000
