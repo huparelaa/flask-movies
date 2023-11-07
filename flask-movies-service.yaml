@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-movies
+  labels:
+    app: flask-movies
+spec:
+  ports:
+  - port: 5000
+    targetPort: http-server
+  selector:
+    app: flask-movies
+  type: LoadBalancer
