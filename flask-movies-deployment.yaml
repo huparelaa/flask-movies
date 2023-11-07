@@ -18,7 +18,10 @@ spec:
     spec:
       containers:
       - name: flask-movies
-        image: hobarlan/flask-movies:latest
+        image: adrephos/api-peliculas
         ports:
-        - name: http-server
-          containerPort: 5000
+          - name: http-server
+            containerPort: 5000
+        env:
+          - name: DATABASE_URL
+            value: postgresql://postgres:example@db/postgres
